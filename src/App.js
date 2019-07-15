@@ -1,24 +1,92 @@
 import React from 'react';
-import logo from './logo.svg';
+import {useState, useEffect} from 'react';
+import Dialog from './components/Dialog';
+import Tabs, {Tab} from './components/Tabs';
+import Scroll from './components/Scroll';
+import Pager from './components/Pager';
+import {getData} from './mockData';
 import './App.css';
 
+
 function App() {
+  const [isOpen, setOpen] = useState(false);
+  const [data, setData] = useState([]);
+
+  const open = () => {
+    setOpen(true);
+  };
+
+  const close = () => {
+    setOpen(false);
+  };
+
+  useEffect(() => {
+    setData([{name: 1},{name: 2}]);
+  },[]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <section>
+        <h3>Dialog</h3>
+        <div>
+          <button onClick={open}>open dialog </button>
+        </div>
+        <Dialog isOpen={isOpen} isModal={false} onClose={close}>
+          <div className="con">this is a dialog</div>
+        </Dialog>
+      </section>
+      
+      <section>
+        <h3>Tab</h3>
+        <Tabs>
+          <Tab title="tab1">
+            {data.map((el, i) => 
+              <div key={i}>{el.name}</div>
+            )}
+          </Tab>
+          <Tab title="tab2">
+            <div className="dd">2222</div>
+            <div>2222</div>
+          </Tab>
+          <Tab title="tab3">
+            <div>333</div>
+            <div>333</div>
+          </Tab>
+        </Tabs>
+      </section>
+     
+      <section>
+        <h3>Pager</h3>
+        <Pager getData={getData} onePageSize={5}>
+          {
+            data => (
+            data.length > 0 &&
+            data.map((v, index) => 
+              <div className="item" key={index}>
+                {v}
+              </div>
+            )
+            )
+          }
+        </Pager>
+      </section>
+    
+      <section>
+        <h3>Scroll</h3>
+        <Scroll getData={getData} >
+          {
+            data => (
+            data.length > 0 &&
+            data.map((v, index) => 
+              <div className="item" key={index}>
+                {v}
+              </div>
+            )
+            )
+          }
+        </Scroll>
+      </section>
+     
     </div>
   );
 }
