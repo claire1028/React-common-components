@@ -29,3 +29,11 @@ export function throttle(func, time) {
     }
   }
 }
+
+export function formatTime(s) {
+	let m = Math.floor(s / 60);
+	m = m >= 10 ? m : '0' + m;
+	s = Math.floor(s % 60);
+	s = s >= 10 ? s : '0' + s;
+	return m + ':' + s;
+}

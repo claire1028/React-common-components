@@ -4,6 +4,10 @@ import Dialog from './components/Dialog';
 import Tabs, {Tab} from './components/Tabs';
 import Scroll from './components/Scroll';
 import Pager from './components/Pager';
+import Loading from './components/Loading';
+import VideoPlayer from './components/VideoPlayer';
+
+import but from './images/but.jpg';
 import {getData} from './mockData';
 import './App.css';
 
@@ -25,6 +29,7 @@ function App() {
   },[]);
 
   return (
+   
     <div className="container">
       <section>
         <h3>Dialog</h3>
@@ -71,6 +76,14 @@ function App() {
         </Pager>
       </section>
     
+      
+      <section>
+        <Loading />
+      </section>
+      <section>
+        <VideoPlayer src="https://s.dianrong.com/static/mp4/dianrong5zhounian.mp4" img={but} />
+      </section>
+
       <section>
         <h3>Scroll</h3>
         <Scroll getData={getData} >
@@ -86,7 +99,7 @@ function App() {
           }
         </Scroll>
       </section>
-     
+      
     </div>
   );
 }
