@@ -6,6 +6,8 @@ import Scroll from './components/Scroll';
 import Pager from './components/Pager';
 import Loading from './components/Loading';
 import VideoPlayer from './components/VideoPlayer';
+import Lottery from './rotate-lottery';
+import SquareLottery from './square-lottery';
 
 import but from './images/but.jpg';
 import {getData} from './mockData';
@@ -31,6 +33,16 @@ function App() {
   return (
    
     <div className="container">
+      <section>
+        <h3>九宫格抽奖</h3>
+        <SquareLottery />
+      </section>
+
+      <section>
+        <h3>Lottery</h3>
+        <Lottery />
+      </section>
+      
       <section>
         <h3>Dialog</h3>
         <div>
@@ -75,7 +87,6 @@ function App() {
           }
         </Pager>
       </section>
-    
       
       <section>
         <Loading />

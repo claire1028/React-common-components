@@ -1,0 +1,29 @@
+.square > table {
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+.square > table > tr > td {
+  border: 2px solid #010101;
+  width: 80px;
+  height: 80px;
+  background: #842d81;
+  color: white;
+}
+
+.square > table > tr > td.active {
+  background: red;
+}
+
+.square > table > tr > td.start { 
+  background: #1fc0da;
+  cursor: pointer;
+}
+
+.square > table > tr > td.disable { 
+  background: #495f63;
+  cursor: unset;
+}
+
+.result {
+  color: #da1717;
+}

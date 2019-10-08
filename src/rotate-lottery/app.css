@@ -1,0 +1,205 @@
+.lottery-wrapper {
+  position: relative;
+  height: 258px;
+  width: 258px;
+  margin: 0 auto;
+}
+.lottery-wrapper  .background {
+  list-style: none;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  border-radius: 50%;
+  border: 4px solid #febd04;
+  padding: 0;
+  display: inline-block;
+  margin: 0;
+}
+
+.lottery-wrapper  .background > li {
+  margin: 0;
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  transform-origin: 100% 100%;
+  border: 1px solid #e85915;
+}
+.background li:nth-child(1) {
+  background-color: #FEFEFE;
+  transform: rotate(0deg) skew(30deg);
+}
+.background li:nth-child(2) {
+  background-color: #FEFEFE;
+  transform: rotate(60deg) skew(30deg);
+}
+.background li:nth-child(3) {
+  background-color: #FEFEFE;
+  transform: rotate(120deg) skew(30deg);
+}
+.background li:nth-child(4) {
+  background-color: #FEFEFE;
+  transform: rotate(180deg) skew(30deg);
+}
+.background li:nth-child(5) {
+  background-color: #FEFEFE;
+  transform: rotate(240deg) skew(30deg);
+}
+.background li:nth-child(6) {
+  background-color: #FEFEFE;
+  transform: rotate(300deg) skew(30deg);
+}
+.pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: orange;
+  line-height: 80px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0px 0px 0 3px #febd04; 
+  z-index: 12;
+}
+.pointer::before {
+  content: '';
+  display: inline-block;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid orange;
+  position: absolute;
+  top: -28px;
+  left: 26px;
+}
+.pointer > i {
+  font-style: normal;
+  width: 60px;
+  height: 60px;
+  border: 2px solid white;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 60px;
+}
+.pointer > ul {
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+}
+.pointer > ul > li {
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  list-style: none;
+  position: absolute;
+  display: block;
+  top: 0;
+  transform: rotate(0deg) translateY(-35px);
+  animation: twinkling 1.2s infinite ease-in-out;
+}
+
+.pointer > ul > li:nth-child(2) {
+  transform: rotate(30deg) translateY(-35px) ;
+}
+.pointer > ul > li:nth-child(3) {
+  transform: rotate(60deg) translateY(-35px) ;
+  animation-delay: .6s;
+}
+.pointer > ul > li:nth-child(4) {
+  transform: rotate(90deg) translateY(-35px) ;
+}
+.pointer > ul > li:nth-child(5) {
+  transform: rotate(120deg) translateY(-35px) ;
+  animation-delay: .6s;
+}
+.pointer > ul > li:nth-child(6) {
+  transform: rotate(150deg) translateY(-35px) ;
+}
+.pointer > ul > li:nth-child(7) {
+  transform: rotate(180deg) translateY(-35px) ;
+  animation-delay: .6s;
+}
+.pointer > ul > li:nth-child(8) {
+  transform: rotate(210deg) translateY(-35px) ;
+}
+.pointer > ul > li:nth-child(9) {
+  transform: rotate(240deg) translateY(-35px) ;
+  animation-delay: .6s;
+}
+.pointer > ul > li:nth-child(10) {
+  transform: rotate(270deg) translateY(-35px) ;
+}
+.pointer > ul > li:nth-child(11) {
+  transform: rotate(300deg) translateY(-35px) ;
+  animation-delay: .6s;
+}
+.pointer > ul > li:nth-child(12) {
+  transform: rotate(330deg) translateY(-35px) ;
+}
+
+ul {
+  position: absolute;
+}
+
+.gifts {
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+
+.gifts > li {
+  position: absolute;
+  top: 14px;
+  left: 122px;
+}
+.gifts > li:nth-child(2) {
+  left: 197px;
+  top: 57px;
+  transform: rotate(60deg);
+}
+.gifts > li:nth-child(3) {
+  top: 140px;
+  left: 197px;
+  transform: rotate(120deg);
+}
+
+.gifts > li:nth-child(4) {
+  top: 178px;
+  transform: rotate(178deg);
+}
+.gifts > li:nth-child(5) {
+  top: 142px;
+  left: 50px;
+  transform: rotate(-121deg);
+}
+.gifts > li:nth-child(6) {
+  top: 55px;
+  left: 48px;
+  transform: rotate(-60deg);
+}
+.bg {
+  transition: transform 4s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes twinkling{
+  0%{
+      background: white;
+  }   
+  100%{
+      background: #fefe00;
+      border: none;
+      box-shadow: 0px 0px 0 1px #eb6f21;
+  }
+}
