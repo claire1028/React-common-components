@@ -8,6 +8,7 @@ import Loading from './components/Loading';
 import VideoPlayer from './components/VideoPlayer';
 import Lottery from './rotate-lottery';
 import SquareLottery from './square-lottery';
+import Scratch from './scratch-lottery';
 
 import but from './images/but.jpg';
 import {getData} from './mockData';
@@ -34,6 +35,11 @@ function App() {
    
     <div className="container">
       <section>
+        <h3>刮刮乐</h3>
+        <Scratch />
+      </section>
+      
+      <section>
         <h3>九宫格抽奖</h3>
         <SquareLottery />
       </section>
@@ -42,7 +48,7 @@ function App() {
         <h3>Lottery</h3>
         <Lottery />
       </section>
-      
+
       <section>
         <h3>Dialog</h3>
         <div>

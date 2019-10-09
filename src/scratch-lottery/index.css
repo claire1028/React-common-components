@@ -1,0 +1,18 @@
+
+.scratch > .bg {
+  background-image: url('../images/scratch-bg.png');
+  width: 329px;
+  height: 238px;
+  background-size: 100% 100%;
+  margin: 0 auto;
+} 
+.scratch > .bg > div {
+  padding-top: 108px;
+}
+canvas {
+  position: absolute;
+  top: 123px;
+  left: 50%;
+  margin-left: -150px;
+  border-radius: 6px;
+}
